@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension version="2.5" type="template" method="upgrade" client="site">
+	<name> ja_appolio</name>
+	<version>1.1.2</version>
+	<creationDate>24 Otc 2014</creationDate>
+	<author>JoomlArt.com</author>
+	<authorEmail>webmaster@joomlart.com</authorEmail>
+	<authorUrl>http://www.t3-framework.org</authorUrl>
+	<copyright>Copyright (C), J.O.O.M Solutions Co., Ltd. All Rights Reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<t3>
+		<base>base-bs3</base>
+	</t3>
+	<description>
+		<![CDATA[
+			<div class="overview-header">
+			<h2>
+			  <small style="display: block;">Responsive Joomla product portfolio template for Joomla 2.5. and Joomla 3 - <strong>JA Appolio</strong>.</small>
+			</h2>
+			<p>A wholenew responsive Joomla template for product portfolio and showcase websites - <strong>JA Appolio</strong>.</p>
+			<p>Structured with clean and well organized sections along with paralax design, this Joomla showcase template will 
+			help you tell a story about your products and deliver it in the most attractive way.</p>
+			<p>Built on the robust T3 Framework with Bootstrap 3 at core, this template is fullly responsive and RTL language 
+			layout compatible. <strong>JA Appolio</strong> features EasyBlog, Off-Canvas navigation and a number of bonus pages. Also in this 
+			template, for the first time we support new features: video background and social login.</p>
+			</div>
+				]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>offline.php</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>templateHelper.php</filename>
+		<filename>templateInfo.php</filename>
+		<filename>thememagic.xml</filename>
+		<folder>css</folder>
+		<folder>etc</folder>
+		<folder>fonts</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>less</folder>
+		<folder>tpls</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_appolio.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_ja_appolio.sys.ini</language>
+	</languages>
+
+	<positions>
+		<position>languageswitcherload</position>
+		<position>head-search</position>
+		<position>mainnav</position>
+		<position>action</position>
+		<position>off-canvas</position>
+		<position>video</position>	
+		<position>gmap</position>
+		<position>ja_tabs</position>
+		<position>ja_tabs_easyblog</position>
+		<position>social-login</position>
+		<position>social</position>
+		<position>masshead</position>
+		<position>sidebar-1</position>
+		<position>sidebar-2</position>
+		<position>parallax</position>
+		<position>footer</position>
+		<position>footnav</position>
+		<position>footer-1</position>
+		<position>footer-2</position>
+		<position>footer-3</position>
+		<position>footer-4</position>
+		<position>footer-logo</position>
+		<position>debug</position>
+	</positions>
+
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/t3/includes/depend">
+
+			<!-- Sample for add or disable template parameters -->
+			<!--fieldset name="menu_params" label="T3_PARAMS_MEGAMENU">
+				<field name="group_disable" type="t3depend" function="@group">
+					<option for="menu_as_bg" value="no">menu_as_bg</option>
+				</field>
+			</fieldset-->
+				
+			<fieldset name="navigation_params">
+				<field name="mm_type" type="menu" default="mainmenu"
+				   label="T3_NAVIGATION_MM_TYPE_LABEL"
+				   description="T3_NAVIGATION_MM_TYPE_DESC">
+				   <option value="none">JNONE</option>
+				 </field>
+
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="collection">http://update.joomlart.com/service/tracking/list.xml</server>
+	</updateservers>
+
+</extension>

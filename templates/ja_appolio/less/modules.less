@@ -1,0 +1,707 @@
+/** 
+ *------------------------------------------------------------------------------
+ * @package       T3 Framework for Joomla!
+ *------------------------------------------------------------------------------
+ * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
+ * @license       GNU General Public License version 2 or later; see LICENSE.txt
+ * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
+ *                & Google group to become co-author)
+ * @Google group: https://groups.google.com/forum/#!forum/t3fw
+ * @Link:         http://t3-framework.org 
+ *------------------------------------------------------------------------------
+ */
+
+
+// --------------------------------------------------
+// MODULE STYLES
+// --------------------------------------------------
+
+// 
+// GENECRIC MODULE
+// --------------------------------------------------
+.t3-module {
+  background: @t3-module-bg;
+  color: @t3-module-color;
+  margin-bottom: @t3-global-margin;
+  // Module padding
+  .module-inner {
+    padding: 0;
+  }
+}
+
+
+// Module Title
+// ------------
+.module-title {
+  background: @t3-module-title-bg;
+  border-bottom: @t3-module-border;
+  color: @t3-module-title-color;
+  font-family: @font-family-sans-serif;
+  line-height: @line-height-computed;
+  margin: 0 0 @t3-global-margin 0;
+  padding: @t3-module-title-padding 0 @t3-module-title-padding/2;
+  font-size: @font-size-base;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+
+// Module Content
+// --------------
+.module-ct {
+  background: @t3-module-content-bg;
+  border-bottom: @t3-module-border;
+  color: @t3-module-content-color;
+  padding: 0 0 @t3-global-padding 0;
+  .clearfix();
+}
+
+
+// Module List
+// -----------
+.module-ct,
+.module-ct .custom {
+  > ul,
+  > ol {
+    margin-left: 20px;
+    padding-left: 0;
+  }
+  
+  ul.unstyled,
+  ol.unstyled {
+    padding-left: 0;
+  }
+
+  ul.nav,
+  ol.nav {
+    padding-left: 0;
+    margin-left: 0;
+  }
+}
+
+.none-border .module-ct {
+  border: none;
+  padding-bottom: 0;
+}
+
+
+
+//
+// JOOMLA! MODULES
+// --------------------------------------------------
+
+
+// Menu
+// ----
+.module_menu {
+  .nav {
+    margin-bottom: @t3-global-margin;
+  }
+  
+  .nav > li {
+  }
+  
+  .nav > li > a,
+  .nav > li > .separator {
+    padding: 10px 0;
+    display: block;
+    color: #111;
+    background: none;
+    border-top: solid 1px @t3-border-color;
+    &:hover, &:focus, &:active {
+      background: none;
+      color: @link-color;
+      border-top-color: @t3-border-color;
+    }
+
+  }
+
+  .nav .dropdown-menu {
+    border-radius: 0;
+    margin: 0;
+    padding: (@t3-global-padding/2) 0;
+    .box-shadow(none);
+
+     > .active > a {
+      background: none; 
+      color: @link-color;
+      &:hover, &:focus, &:active {
+        background: none; 
+        color: @link-color;
+      }
+    }
+  }
+  
+  // No top border
+  .nav > li:first-child {
+    border-top: 0;
+  }
+  
+  .nav > li:first-child > a {
+    border-top: 0;
+  }
+  
+  // Hover state
+  .nav > li > a:hover {
+  }
+  
+  // Active state
+  .nav > li.active > a {
+  }
+}
+
+
+// Login Form
+// ----------
+#login-form {
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 90%;
+    font-size: @font-size-small;
+    border-radius: 0px;
+  }
+  
+  ul.unstyled {
+    margin-top: @line-height-computed*0.75;
+    margin-left: @line-height-computed*0.75;
+    font-size: 13px; 
+
+    li {
+      > a {
+        color: @gray;
+        display: block;
+        padding: 3px 0;
+        &:hover, &:focus, &:active {
+          color: @link-hover-color;
+        }
+      }
+    }
+  }
+
+  #form-login-remember {
+    label {
+      font-weight: normal;
+    }
+  }
+  
+  img {
+  	display: inline-block;
+  	margin-bottom: @t3-global-margin/2;
+  }
+
+  .login-greeting {
+    margin-bottom: @t3-global-margin/2;
+  }
+
+}
+
+// Advertisement
+// -------------
+.bannergroup {
+  img {
+    width: 100%;
+  }
+}
+
+.banneritem {
+  a {
+    font-weight: bold;
+  }
+}
+
+.bannerfooter {
+  border-top: 1px solid @t3-border-color;
+  font-size: @t3-font-size-smaller;
+  padding-top: @t3-global-padding / 2;
+  text-align: right;
+}
+
+
+// Categories
+// ----------
+.categories-module, ul.categories-module,
+.category-module, ul.category-module {
+  margin: 0;
+  
+  li {
+    list-style: none;
+    padding: (@line-height-computed / 2) 0;
+    border-top: 1px solid @t3-border-color;
+    // Remove border for first item
+    &:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+  
+  h4 {
+    font-size: @font-size-base;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+
+// News Feed
+// ----------
+.feed {
+  // Feed Title
+  h4 {
+    font-weight: bold;
+  }
+  // Feed list
+  .newsfeed,
+  ul.newsfeed {
+    border-top: 1px solid @hr-border;
+    li {}
+    .feed-link, 
+    h5.feed-link {
+      font-size: @font-size-base;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+}
+
+
+// Latest Users 
+// ------------
+.latestusers,
+ul.latestusers {
+  margin-left: 0;
+  li {
+    background: @gray-lighter;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: @border-radius-base;
+  }
+}
+
+
+// Stats 
+// ------
+.stats-module {
+  dt, dd {
+    display: inline-block;
+    margin: 0;
+  }
+  dt {
+    font-weight: bold;
+    width: 35%;
+  }
+  dd {
+    width: 60%;
+  }
+}
+
+
+// Popular Tags
+//-------------
+.tagspopular {
+  ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+
+  ul > li {
+    color: @gray;
+    display: inline-block;
+    margin: 0 5px 9px 0;
+
+    > a {
+      background: @gray-lighter;
+      border-radius: 3px;
+      color: @gray;
+      display: block;
+      padding: 5px 10px;
+      // Links states
+      &:hover, &:focus, &:active {
+        background: @link-color;
+        color: @white;
+        text-decoration: none;
+      }
+    }
+
+    > span.tag-count {
+      display: none;
+    }
+  }
+
+}
+
+// Similar tags
+// ------------
+.tagssimilar {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ul > li {
+    border-bottom: 1px solid @gray-lighter;
+    padding: 8px 0;
+  }
+
+  ul > li > a {
+    color: @gray;
+    // Link states
+    &:hover,
+    &:focus,
+    &:active {
+      color: @link-hover-color;
+    }
+  }
+}
+
+
+// Mod Languages
+// ---------- --
+div.mod-languages{
+  ul.lang-inline li {
+    @media screen and (max-width: @screen-sm) {
+      margin-left: 5px;
+      margin-right: 0px;
+    }
+  }
+}
+
+
+// Article Category
+// ---------- -----
+.categories-module.value-page,
+ul.categories-module.value-page,
+.value-page {
+  width: 100%;
+  margin: 50px auto !important;
+  position: relative;
+  padding: 0;
+  @media screen and (min-width: @screen-md) {
+    width: 70%; 
+    margin-bottom: 45px !important;
+  }
+
+  &:before {
+    border-left: 1px solid @t3-border-color;
+    top: -45px;
+    content: "";
+    display: block;
+    height: 35px;
+    left: 50%;
+    position: absolute;
+  }
+
+  &:after {
+    border-left: 1px solid @t3-border-color;
+    bottom: -45px;
+    content: "";
+    display: block;
+    height: 45px;
+    left: 50%;
+    position: absolute;
+  }
+
+  h3 {
+    color: @gray-darker;
+    font-family: @font-family-sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 0;
+    text-transform: uppercase;
+
+    a {
+      color: @gray-darker;
+      text-transform: uppercase;
+      &:hover, &:focus, &:active {
+        color: @link-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  li {
+    line-height: @tpl-line-height;
+    border: none !important;
+    margin: 0 0 15px;
+    padding: 0;
+  }
+
+  li > span {
+    color: #bfbfbf;
+    margin-right: @t3-global-margin / 2;
+    margin-top: 5px;
+    font-size: 13px;
+
+    .writtenby {
+      font-weight: bold;
+    }
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}
+
+
+
+//
+// EASYBLOG MODULE STYLE
+// ---------------------
+
+
+// EasyBlog Archive Module 
+// -----------------------
+.mod_easyblogarchive {
+  .mod-months {
+    .mod-year {
+      font-size: 12px;
+    }
+
+    .mod-month {
+      background: url("@{t3-image-path}/bg-month-ltr.png") no-repeat left center;
+      color: #aaa;
+      font-size: 12px;
+      margin-left: 3px;
+
+      &:last-child {
+        background: url("@{t3-image-path}/bg-month-last-ltr.png") no-repeat left center;
+      }
+
+      a {
+        font-weight: 700;
+        color: #444;
+
+        &:hover, &:active, &:focus {
+          color: #0097bf;
+        }
+      }
+    }
+  }
+}
+
+
+// EasyBlog Popular & Latestpost Module 
+// -----------------------
+.ezb-mod.mod_easyblogmostpopularpost,
+.ezb-mod.ezblog-latestpost {
+  .mod-item {
+    border-bottom: @t3-module-border;
+    border-top: none;
+    color: #aaa;
+    font-size: @font-size-small;
+    padding: 15px 0 !important;
+
+    + .mod-item {
+      border-top: 0;
+      margin: 0 !important;
+    }
+
+    .mod-post-title {
+      a {
+        color: @gray-darker;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: @line-height-computed - 2px;
+        margin-bottom: 5px;
+        text-decoration: none;
+
+        &:hover, &:active, &:focus {
+          color: @link-hover-color;
+        }
+      }
+    }
+
+    .mod-post-author {
+      border-top: 0;
+      margin: 0;
+      padding: 0;
+
+      .post-author {
+        font-size: @t3-font-size-smaller;
+      }
+    }
+  }
+}
+
+
+// EasyBlog Recent Comments
+// ------------------------
+div.latest-comments {
+  .mod-item {
+    padding: 20px 0 !important;
+
+    + .mod-item {
+      border-top: 1px solid @t3-border-color;
+      margin: 0 !important;
+    }
+
+    .mod-comment-head {
+      border: 0;
+      line-height: normal;
+      margin: 0;
+      padding: 0;
+      position: relative;
+
+      .mod-avatar {
+        margin: 0 20px 5px 0;
+        width: 60px;
+
+        img {
+          max-width: 100%;
+          border: 1px solid @t3-border-color;
+        }
+      }
+
+      .top-comment {
+        line-height: normal;
+
+        .post-author {
+          display: inline-block;
+          font-size: @font-size-base - 3px;
+          margin-bottom: 5px;
+        }
+
+        .post-date {
+          border-left: 1px solid @t3-border-color;
+          color: #aaa;
+          display: inline-block;
+          font-size: @font-size-base - 3px;
+          margin: 0 0 0 5px;
+          padding: 0 0 0 5px;
+        }
+      }
+
+      .mod-post-title {
+        font-size: @font-size-base;
+        margin-bottom: 5px;
+
+        a {
+          line-height: normal;
+        }
+      }
+
+      .mod-comment-content {
+        color: @text-color;
+      }
+    }
+  }
+}
+
+
+
+// SLogin
+// --------------------------------------------------------
+.slogin-buttons.appolio {
+  
+  a {
+    
+  }
+}
+
+
+// Ja Tabs
+// --------------------------------------------------------
+
+.ja-tabswrap.default {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100% !important;
+    z-index: 1;
+  }
+
+  .ja-tabs-title-top {
+    border: none;
+    height: auto !important;
+
+    ul.ja-tabs-title {
+      position: static;
+      .clearfix();
+
+      li {
+        background: none;
+        border: 1px solid @tpl-border-color;
+        border-radius: 2px;
+        margin: 0 (@t3-global-margin/2) (@t3-global-margin/2) 0;
+        position: relative;
+        transition: 0.2s;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        > h3 {
+          border: none;
+          color: #aaa;
+          font-weight: 500;
+          line-height: @line-height-computed;
+          padding: 7px @t3-global-padding;
+        }
+
+        &:hover {
+          background: @brand-primary;
+          border-color: @brand-primary;
+
+          > h3 {
+            color: @white;
+          }
+        }
+
+        &.active, &.firstactive, &.lastactive {
+          background: @brand-primary;
+          border-color: @brand-primary;
+
+          > h3 {
+            color: @white;
+          }
+
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            margin-left: -5px;
+            border-top: 6px solid @brand-primary;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+          }
+        }
+      }
+    }
+  }
+
+  .ja-tab-panels-top {
+    .ja-tab-content li {
+      border-bottom: @t3-module-border;
+      border-top: none;
+      color: #aaa;
+      font-size: @font-size-small;
+      padding: 15px 0;
+
+      h4 {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: @line-height-computed - 2px;
+        margin-bottom: 5px;
+
+        > a {
+          color: @gray-darker;
+          text-decoration: none;
+
+          &:hover {
+            color: @link-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

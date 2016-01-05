@@ -1,0 +1,1 @@
+<?php die("Access Denied"); ?>#x#s:311:"plugins/system/t3/base-bs3/bootstrap/less/variables.less|plugins/system/t3/base-bs3/less/variables.less|templates/ja_decor/less/variables.less|plugins/system/t3/base-bs3/bootstrap/less/mixins.less|plugins/system/t3/base-bs3/less/mixins.less|templates/ja_decor/local/less/themes/sense-green/variables-custom.less";

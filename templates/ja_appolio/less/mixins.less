@@ -1,0 +1,190 @@
+// Scale UP Animation
+
+@-webkit-keyframes scale-up {
+  0% {
+    -webkit-transform: scale(0.2)
+  }
+
+  100% {
+    -webkit-transform:scale(1)
+  }
+}
+
+@-moz-keyframes scale-up {
+  0% {
+    -moz-transform: scale(0.2)
+  }
+
+  100% {
+    -moz-transform:scale(1)
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.2)
+  }
+
+  100% {
+    transform:scale(1)
+  }
+}
+
+@-ms-keyframes scale-up {
+  0% {
+    transform: scale(0.2)
+  }
+
+  100% {
+    transform:scale(1)
+  }
+}
+
+
+// Move Left Animation
+
+@-webkit-keyframes move-left {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@-moz-keyframes move-left {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes move-left {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@-ms-keyframes move-left {
+  0% {
+    left: -50%;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+// Move Right Animation
+
+@-webkit-keyframes move-right {
+  0% {
+    right: -50%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@-moz-keyframes move-right {
+  0% {
+    right: -50%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes move-right {
+  0% {
+    right: -50%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@-ms-keyframes move-right {
+  0% {
+    right: -50%;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+
+// Delay Animation
+.animation-delay(@animation-name; @animation-delay) {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+  animation-delay: @animation-delay;
+  -webkit-animation-delay: @animation-delay;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-out;
+  animation-name: @animation-name;
+  -webkit-animation-name: @animation-name;
+}
+
+// Background Mask
+.background-mask {
+  background-color: @black;
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1,startColorstr=@black, endColorstr=@black);
+  background-image: -moz-linear-gradient(right top, @black 0%, @black 30%,@black 70%,@black 100%);
+  background-image: linear-gradient(right top, @black 0%, @black 30%,@black 70%,@black 100%);
+  background-image: -webkit-linear-gradient(right top, @black 0%, @black 30%,@black 70%,@black 100%);
+  background-image: -o-linear-gradient(right top, @black 0%, @black 30%,@black 70%,@black 100%);
+  background-image: -ms-linear-gradient(right top, @black 0%, @black 30%,@black 70%,@black 100%);
+  background-image: -webkit-gradient(linear, right top, left bottom, color-stop(0%,@black), color-stop(30%,@black),color-stop(70%,@black),color-stop(100%,@black));
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  .opacity(0.4);
+}
+
+
+
+// Delay Animation
+@-webkit-keyframes background-move {
+  from{ -webkit-transform: translateY(0); }
+  to{ -webkit-transform: translateY(-30%); }
+}
+
+@-moz-keyframes background-move {
+  from{ -moz-transform: translateY(0);}
+  to{-moz-transform: translateY(-30%); }
+}
+
+@-o-keyframes background-move {
+  from{ -o-transform: translateY(0);}
+  to{ -o-transform: translateY(-30%); }
+}
+
+@keyframes background-move {
+  from{transform: translateY(0); }
+  to { transform: translateY(-30%);}
+}
+
+@-ms-keyframes background-move {
+  from{transform: translateY(0); }
+  to { transform: translateY(-30%);}
+}

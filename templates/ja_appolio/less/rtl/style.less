@@ -1,0 +1,155 @@
+// RTL STYLES
+// ------------------------------------------------------
+
+// Article Images
+// --------------
+article img[align=left],
+.img_caption.left,
+.pull-left.item-image {
+  margin: 0 @grid-gutter-width @t3-global-margin 0;
+}
+
+article img[align=right],
+.img_caption.right,
+.pull-right.item-image {
+  margin: 0 0 @t3-global-margin @grid-gutter-width;
+}
+
+.languageswitcherload {
+  ul {
+    float: left;
+  }
+}
+
+.section.parallax.twocolumn .custom {
+  .col-sm-6:first-child {
+    @media screen and (max-width: @screen-sm) {
+      right: 0;
+    }
+  }
+
+  .col-sm-6:last-child {
+    @media screen and (max-width: @screen-sm) {
+      left: 0;
+    }
+  }
+}
+
+.section.parallax.twocolumn {
+  &.inview {
+    .custom {
+      .col-sm-6:first-child {
+        .animation-delay(move-left, 0.2s);
+      }
+
+      .col-sm-6:last-child {
+        .animation-delay(move-right, 0.2s);
+      }
+    }
+  }
+}
+
+// Module Tabs
+.ja-tabswrap.default .ja-tabs-title-top ul.ja-tabs-title li {
+  float: right;
+}
+
+ul.check-list {
+  li i {
+    margin-right: 0;
+    margin-left: @t3-global-margin/2;
+  }
+}
+
+// Typography
+// ------------------------------------
+pre.prettyprint.linenums {
+  -webkit-box-shadow: inset -40px 0 0 #fbfbfc, inset -41px 0 0 #ececf0;
+     -moz-box-shadow: inset -40px 0 0 #fbfbfc, inset -41px 0 0 #ececf0;
+          box-shadow: inset -40px 0 0 #fbfbfc, inset -41px 0 0 #ececf0;
+}
+
+pre ol.linenums {
+  margin: 0 36px 0 0;
+  padding-right: 0;
+}
+
+// animate-slide 
+.animate-slide {
+
+  &.inview {
+    > div:first-child {
+      .animation-delay(move-left, 0.5s);
+    }
+
+    > div:last-child {
+      .animation-delay(move-right, 0.5s);
+    }
+  }
+}
+
+// Easyblog 
+// ---------------------------------------
+.ezb-mod .mod-avatar {
+  float: right !important;
+  margin-right: 0;
+  margin-left: @t3-global-margin/2;
+}
+
+#eblog-wrapper {
+  .blog-meta {
+    text-align: left;
+    .blog-author, 
+    .blog-author a {
+      float: right;
+    }
+
+  }
+}
+
+.mod_easyblogarchive .mod-months .mod-month {
+  background-position: right center;
+  margin-left: 0;
+  margin-right: 3px;
+  padding-left: 0 !important;
+  padding-right: 24px !important;
+}
+
+//
+// TABLET
+// -------------------------------------------------------------
+@media (max-width: @screen-sm) {
+  #eblog-wrapper {
+    &.w768 {
+      .list-form li > label {
+        float: right;
+
+        & + div {
+          margin: 0 165px 0 10px !important;
+        }
+      }
+    }
+  }
+}
+
+
+
+//
+// MOBILE 360
+// -------------------------------------------------------------
+@media (max-width: @scren-xs-min-phone) {
+  .layout-write {
+    #eblog-wrapper {
+      &.w768 {
+        .list-form li > label {
+          float: none;
+          text-align: right;
+
+          & + div {
+            margin: 0 10px 0 0 !important;
+          }
+        }
+      }
+    }
+  }
+}
