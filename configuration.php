@@ -43,8 +43,8 @@ class JConfig {
 	public $caching = '0';
 	public $cache_handler = 'file';
 	public $cachetime = '15';
-	public $MetaDesc = '視覺觀國際廣告事業有限公司，在平面設計，目錄設計業界中擁有二十年的經驗，是您專業值得信賴的夥伴。';
-	public $MetaKeys = '';
+	public $MetaDesc = '視覺觀 SEnSE 團隊累積多年經驗，專精於網頁設計、CIS設計、展場設計、廣告設計、包裝設計、網站規劃及網路行銷，追求「設計精緻化、表現藝術化。」，是您專業值得信賴的夥伴。';
+	public $MetaKeys = '設計, 網頁設計, CIS設計, 品牌設計, 企業識別設計, 商標設計, LOGO設計, 平面設計, DM設計, 目錄設計, 廣告設計, 視覺設計, 包裝設計, 產品設計, 結構設計, 展場設計, 海報設計, 攤位設計, 櫃台設計, 專櫃設計, 牆面設計, 網印設計, 網站規劃, 網路行銷';
 	public $MetaTitle = '1';
 	public $MetaAuthor = '1';
 	public $MetaVersion = '0';
